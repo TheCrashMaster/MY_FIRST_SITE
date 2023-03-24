@@ -1,0 +1,263 @@
+
+/* общие настройки */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web';
+}
+body {
+  background: rgb(217, 239, 185);
+  
+}
+body header {
+  text-align:center;
+ 
+}
+.father-rect {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+
+/* <!-- header секция --> */
+header img {
+  margin-top: 35px;
+  width: 70px;
+}
+
+/* <!-- главный экран секция --> */
+.main-screen {
+  display: flex;
+  gap: 5em;
+  margin-top: 5em;
+}
+/* ---------------- */
+/* <!-- главный экран правая секция --> */
+.right {
+  width: 50%;
+  transform:scale(-1, 1);  
+}
+.main-screen img {
+  width: 100%;
+}
+/* ---------------- */
+/* <!-- главный экран левая секция --> */
+.left {
+  /* padding: 6% 2% 2%; */
+  width: 50%;
+}
+.left h1 {
+  text-align:center;
+  font-size: 45px;
+  color: #e7492d;
+}
+.left h3 {
+  text-align:center;
+  font-size: 20px;
+  padding: 20px 0;
+}
+.left span {
+  color: #e7492d;
+  font-weight: bold;
+}
+
+/* ---------------- */
+
+
+
+.between-screen {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+
+
+
+/* <!-- второй экран секция --> */
+.second-screen {
+  display: flex;
+  gap: 8em;
+  margin-top: 5em;
+}
+/* <!-- второй экран левая секция --> */
+.sec-left {
+  width: 50%;
+  transform:scale(-1, 1);
+}
+.second-screen img {
+  width: 100%;
+}
+/* <!-- второй экран правая секция --> */
+.sec-right {
+  width: 50%;
+}
+/* таб скилы образование опыт и тД */
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+  
+}
+.tab-links {
+  margin-right: 55px;
+  font-size: 32px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+/* настройка анимации ( полоска под активным тэгом) */
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background: #fa4324;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 100%;
+}
+/* то что развернуто описывает скилы образование и тД */
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+  font-size: 22px;
+}
+.tab-contents ul li span {
+  color: #fa4324;
+  font-size: 20px;
+}
+/* распределяем контент к активной кнопке */
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+
+
+
+.btn2 {
+  width: 47%;
+  height: 60px;
+  /* padding: 14px 50px; */
+  font-size: 18px;
+  /* margin-top: 20px; */
+  border-radius: 8px;
+  cursor: pointer;
+  background: #58c9f0;
+  color: white;
+  margin-top: 15px;
+}
+.btn2 a {
+  color: white;
+  text-decoration: none;
+}
+.two-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.btn3 {
+  width: 100%;
+  height: 60px;
+  /* padding: 14px 50px; */
+  font-size: 18px;
+  /* margin-top: 20px; */
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fab426;
+  color: white;
+  margin-top: 15px;
+}
+.btn3 a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ---------------- */
+
+
+/* <!-- третий экран  --> */
+  
+.copyright {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 25px 0;
+  background: rgb(203, 212, 190);
+  color: rgb(146, 145, 145);
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+/* ---------------- */
+
+/* <!-- главный экран мобильная версия --> */
+
+@media only screen and (max-width: 600px){
+  
+  /* .father-rect {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3%;
+  } */
+  .main-screen {
+    margin-top: 105px;
+    display: inline;
+  }
+  .left {
+    width: 100%;  
+  }
+  .right {
+    width: 100%;
+    text-align: center;
+  }
+  .left form {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .left h1 {
+    text-align:center;
+    font-size: 45px;
+    padding: 10px 10px;
+  }
+  .left h3 {
+    text-align:center;
+    font-size: 25px;
+    padding: 20px 0;
+  }
+
+
+
+
+  .second-screen {
+    margin-top: 105px;
+    display: inline;
+  }
+  .sec-left {
+    width: 100%;
+    transform:scale(-1, 1);
+  }
+  .sec-right {
+    width: 100%;
+  }
+
+
+  .tab-links {
+    margin-right: 15px;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+  .buttons-contact {
+    width: 100%;
+  }
+}
